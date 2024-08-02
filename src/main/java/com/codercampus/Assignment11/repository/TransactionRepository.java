@@ -48,4 +48,14 @@ public class TransactionRepository {
 		} 
 		
 	}
+
+	public Transaction findByid(Integer transactionId) {
+		for(Transaction transaction : transactions) {
+			if (transaction.getId().equals(transactionId.longValue())) {
+				return transaction;
+			}
+		}
+		return null;
+			
+	}
 }
